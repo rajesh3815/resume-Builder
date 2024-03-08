@@ -1,0 +1,50 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    padding-top: 0;
+}
+.heading{
+    font-weight: 500;
+    font-size: 2.1rem;
+}
+.toolbar{
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+.colors{
+    display: flex;
+    gap: 20px;
+    padding: 0 30px;
+}
+.colors .color{
+    height:36px ;
+    width: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.toolbar button{
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: rgb(40, 123, 148);
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: flex;
+    gap:5px;
+    align-items: center;
+    justify-content: center;
+}
+.toolbar button svg{
+    height: 20px;
+    width: 20px;
+}
