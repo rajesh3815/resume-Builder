@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { ArrowDown } from "react-feather";
 import Style from "./Body.module.css";
 import Editor from "../editor/Editor";
+import Resume from "../resume/Resume";
+
 const Body = () => {
   const colors = ["#001eff", "#80f55d", "#b32e3c", "#def241", "#db41f2"];
   const sections = {
@@ -71,6 +73,7 @@ const Body = () => {
       </div>
       <div className={Style.main}>
         <Editor sections={sections} resumeinfo={resumeInfo}  setResumeInfo={setResumeInfo}/>
+       <Resume/>
       </div>
     </div>
   );
