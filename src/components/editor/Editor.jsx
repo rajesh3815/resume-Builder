@@ -31,7 +31,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
         <Inputcontrol
           label="Title"
           placeholder="Enter title eg.Backend devloper"
-          defaultValue={values.title}
+          value={values.title}
           onChange={(e) =>
             setValues((prev) => ({ ...prev, title: e.target.value }))
           }
@@ -39,7 +39,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
         <Inputcontrol
           label="Company Name"
           placeholder="Enter Company name"
-          defaultValue={values.companyName}
+          value={values.companyName}
           onChange={(e) =>
             setValues((prev) => ({ ...prev, companyName: e.target.value }))
           }
@@ -49,7 +49,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
         <Inputcontrol
           label="Certificate link"
           placeholder="Enter certificate link"
-          defaultValue={values.certificationLink}
+          value={values.certificationLink}
           onChange={(e) =>
             setValues((prev) => ({
               ...prev,
@@ -60,7 +60,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
         <Inputcontrol
           label="Work type"
           placeholder="Eenter work eg. Remote"
-          defaultValue={values.workType}
+          value={values.workType}
           onChange={(e) =>
             setValues((prev) => ({ ...prev, workType: e.target.value }))
           }
@@ -71,7 +71,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
           label="Start Date"
           type="date"
           placeholder="Enter start date"
-          defaultValue={values.startDate}
+          value={values.startDate}
           onChange={(e) =>
             setValues((prev) => ({ ...prev, startDate: e.target.value }))
           }
@@ -80,7 +80,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
           label="end date"
           type="date"
           placeholder="Enter end date"
-          defaultValue={values.endDate}
+          value={values.endDate}
           onChange={(e) =>
             setValues((prev) => ({ ...prev, endDate: e.target.value }))
           }
@@ -90,12 +90,12 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
         <label> Enter work description</label>
         <Inputcontrol
           placeholder="Line 1"
-          defaultValue={values.points ? values.points[0] : ""}
+          value={values.points ? values.points[0] : ""}
           onChange={(e) => pointUpdateChange(e.target.value, 0)}
         />
         <Inputcontrol
           placeholder="Line 2"
-          defaultValue={values.points ? values.points[1] : ""}
+          value={values.points ? values.points[1] : ""}
           onChange={(e) => pointUpdateChange(e.target.value, 1)}
         />
       </div>
@@ -107,7 +107,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
         <Inputcontrol
           label="Title"
           placeholder="Enter title eg. Chat app"
-          defaultValue={values.title}
+          value={values.title}
           onChange={(e) =>
             setValues((prev) => ({ ...prev, title: e.target.value }))
           }
@@ -116,7 +116,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
       <Inputcontrol
         label="Overview"
         placeholder="Enter basic overview of project"
-        defaultValue={values.overview}
+        value={values.overview}
         onChange={(e) =>
           setValues((prev) => ({ ...prev, overview: e.target.value }))
         }
@@ -125,7 +125,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
         <Inputcontrol
           label="Deployed Link"
           placeholder="Enter deployed link of project"
-          defaultValue={values.deployLink}
+          value={values.deployLink}
           onChange={(e) =>
             setValues((prev) => ({ ...prev, deployLink: e.target.value }))
           }
@@ -133,7 +133,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
         <Inputcontrol
           label="Github Link"
           placeholder="Enter github link of project"
-          defaultValue={values.githubLink}
+          value={values.githubLink}
           onChange={(e) =>
             setValues((prev) => ({ ...prev, githubLink: e.target.value }))
           }
@@ -143,22 +143,22 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
         <label>Enter project description</label>
         <Inputcontrol
           placeholder="Line 1"
-          defaultValue={values.points ? values.points[0] : ""}
+          value={values.points ? values.points[0] : ""}
           onChange={(e) => pointUpdateChange(e.target.value, 0)}
         />
         <Inputcontrol
           placeholder="Line 2"
-          defaultValue={values.points ? values.points[1] : ""}
+          value={values.points ? values.points[1] : ""}
           onChange={(e) => pointUpdateChange(e.target.value, 1)}
         />
         <Inputcontrol
           placeholder="Line 3"
-          defaultValue={values.points ? values.points[2] : ""}
+          value={values.points ? values.points[2] : ""}
           onChange={(e) => pointUpdateChange(e.target.value, 2)}
         />
         <Inputcontrol
           placeholder="Line 4"
-          defaultValue={values.points ? values.points[3] : ""}
+          value={values.points ? values.points[3] : ""}
           onChange={(e) => pointUpdateChange(e.target.value, 3)}
         />
       </div>
@@ -170,7 +170,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
         <Inputcontrol
           label="Title"
           placeholder="Enter title eg. B-tech"
-          defaultValue={values.title}
+          value={values.title}
           onChange={(e) =>
             setValues((prev) => ({ ...prev, title: e.target.value }))
           }
@@ -179,7 +179,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
       <Inputcontrol
         label="College/School Name"
         placeholder="Enter name of your college/school"
-        defaultValue={values.college}
+        value={values.college}
         onChange={(e) =>
           setValues((prev) => ({ ...prev, college: e.target.value }))
         }
@@ -189,7 +189,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
           label="Start Date"
           type="date"
           placeholder="Enter start date of this education"
-          defaultValue={values.startDate}
+          value={values.startDate}
           onChange={(e) =>
             setValues((prev) => ({ ...prev, startDate: e.target.value }))
           }
@@ -198,7 +198,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
           label="End Date"
           type="date"
           placeholder="Enter end date of this education"
-          defaultValue={values.endDate}
+          value={values.endDate}
           onChange={(e) =>
             setValues((prev) => ({ ...prev, endDate: e.target.value }))
           }
@@ -211,8 +211,8 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
       <div className={Style.row}>
         <Inputcontrol
           label="Name"
-          placeholder="Enter your full name eg. Aashu"
-          defaultValue={values.name}
+          placeholder="Enter your full name eg. Rajesh"
+          value={values.name}
           onChange={(e) =>
             setValues((prev) => ({ ...prev, name: e.target.value }))
           }
@@ -220,7 +220,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
         <Inputcontrol
           label="Title"
           placeholder="Enter your title eg. Frontend developer"
-          defaultValue={values.title}
+          value={values.title}
           onChange={(e) =>
             setValues((prev) => ({ ...prev, title: e.target.value }))
           }
@@ -230,7 +230,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
         <Inputcontrol
           label="Linkedin Link"
           placeholder="Enter your linkedin profile link"
-          defaultValue={values.linkedin}
+          value={values.linkedin}
           onChange={(e) =>
             setValues((prev) => ({ ...prev, linkedin: e.target.value }))
           }
@@ -238,7 +238,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
         <Inputcontrol
           label="Github Link"
           placeholder="Enter your github profile link"
-          defaultValue={values.github}
+          value={values.github}
           onChange={(e) =>
             setValues((prev) => ({ ...prev, github: e.target.value }))
           }
@@ -248,14 +248,14 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
         <Inputcontrol
           label="Email"
           placeholder="Enter your email"
-          defaultValue={values.email}
+          value={values.email}
           onChange={(e) =>
             setValues((prev) => ({ ...prev, email: e.target.value }))
           }
         />
         <Inputcontrol
           label="Enter phone"
-          defaultValue={values.phone}
+          value={values.phone}
           placeholder="Enter your phone number"
           onChange={(e) =>
             setValues((prev) => ({ ...prev, phone: e.target.value }))
@@ -270,22 +270,22 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
         <label>List your achievements</label>
         <Inputcontrol
           placeholder="Line 1"
-          defaultValue={values.points ? values.points[0] : ""}
+          value={values.points ? values.points[0] : ""}
           onChange={(e) => pointUpdateChange(e.target.value, 0)}
         />
         <Inputcontrol
           placeholder="Line 2"
-          defaultValue={values.points ? values.points[1] : ""}
+          value={values.points ? values.points[1] : ""}
           onChange={(e) => pointUpdateChange(e.target.value, 1)}
         />
         <Inputcontrol
           placeholder="Line 3"
-          defaultValue={values.points ? values.points[2] : ""}
+          value={values.points ? values.points[2] : ""}
           onChange={(e) => pointUpdateChange(e.target.value, 2)}
         />
         <Inputcontrol
           placeholder="Line 4"
-          defaultValue={values.points ? values.points[3] : ""}
+          value={values.points ? values.points[3] : ""}
           onChange={(e) => pointUpdateChange(e.target.value, 3)}
         />
       </div>
@@ -296,7 +296,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
       <Inputcontrol
         label="Summary"
         placeholder="Enter your objective/summary"
-        defaultValue={values.summary}
+        value={values.summary}
         onChange={(e) =>
           setValues((prev) => ({ ...prev, summary: e.target.value }))
         }
@@ -308,7 +308,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
       <Inputcontrol
         label="Other"
         placeholder="Enter something"
-        defaultValue={values.other}
+        value={values.other}
         onChange={(e) =>
           setValues((prev) => ({ ...prev, other: e.target.value }))
         }
@@ -389,6 +389,8 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
   useEffect(() => {
     console.log(resumeinfo);
   }, [resumeinfo]);
+
+
 
   useEffect(() => {
     setValues({
@@ -565,6 +567,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
     const details = activeinfo?.details;
     if (!Object.keys(details).length) return;
     const lastItem = details[details.length - 1];
+    // console.log(Object.keys(lastItem).length);
     if (!Object.keys(lastItem).length) return;
     details.push({});
     setResumeInfo((prev) => ({
