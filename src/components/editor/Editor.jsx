@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Style from "./Editor.module.css";
 import { X } from "react-feather";
+import { ToastContainer, toast ,Bounce} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Inputcontrol from "../inputcontroler/Inputcontrol";
 const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
   const [activesection, setactivesection] = useState(Object.keys(sections)[0]);
@@ -8,7 +10,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
     resumeinfo[sections[Object.keys(sections)[0]]]
   );
   const [sectiontitle, setSectiontitle] = useState(Object.keys(sections)[0]);
-
+  const [isSubmit, setIssubmit] = useState(false);
   const [values, setValues] = useState({
     name: activeinfo?.detail?.name || "",
     title: activeinfo?.detail?.title || "",
@@ -387,10 +389,8 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
   }, [activesection]);
 
   useEffect(() => {
-    console.log(resumeinfo);
+    // console.log(resumeinfo);
   }, [resumeinfo]);
-
-
 
   useEffect(() => {
     setValues({
@@ -439,6 +439,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
   }, [resumeinfo]);
 
   const handelsubmit = (e) => {
+    setIssubmit(true);
     e.preventDefault();
     switch (sections[activesection]) {
       case sections.basicInfo: {
@@ -603,6 +604,21 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
             }`}
             key={item}
             onClick={() => {
+              if (!isSubmit) {
+                toast.warn("⬇️please click the save button!", {
+                  position: "top-right",
+                  autoClose: 5000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "colored",
+                  transition: Bounce,
+                });
+                return;
+              }
+              setIssubmit(false);
               setactivesection(item);
             }}
           >
@@ -654,6 +670,7 @@ const Editor = ({ sections, resumeinfo, setResumeInfo }) => {
         {generateBody()}
         <button onClick={handelsubmit}>save</button>
       </div>
+      <ToastContainer />
     </div>
   );
 };

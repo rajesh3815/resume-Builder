@@ -116,3 +116,15 @@
 .body button:active{
     transform: translateY(3px);
 }
+@media only screen and (max-width: 767px) {
+
+    .container{
+        min-width: 100vw;
+        width: 100vw;
+        
+    }
+    .detail .row{
+        flex-direction: column;
+    }
+   
+}

@@ -113,3 +113,17 @@
     line-height: 1.6rem;
     margin-left: 16px;
 }
+@media only screen and (max-width: 767px) {
+    .container{
+        width: 100vw;
+        min-width: 100vw;
+        padding: 1rem;
+    }
+    .sectionHeader{
+        font-size: 1.2rem;
+    }
+    .links{
+        flex-wrap: wrap;
+        font-size: 12px;
+    }
+}

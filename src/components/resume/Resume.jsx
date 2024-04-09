@@ -7,6 +7,7 @@ import { LuGithub } from "react-icons/lu";
 import { CiCalendar } from "react-icons/ci";
 import { FaLink } from "react-icons/fa6";
 import { IoLocationOutline } from "react-icons/io5";
+
 const Resume = forwardRef(({ resumeInfo, color }, ref) => {
   const BasicDetails = resumeInfo?.BasicInfo?.detail;
   const EducationDetail = resumeInfo?.Education?.details;
@@ -15,7 +16,7 @@ const Resume = forwardRef(({ resumeInfo, color }, ref) => {
   const WorkExperienceDetail = resumeInfo?.WorkExperience?.details;
   const SummaryDetail = resumeInfo?.Summary?.detail;
   const OtherDetail = resumeInfo?.Other?.detail;
-  console.log(BasicDetails.github);
+  // console.log(BasicDetails.github);
 
   const formatDate = (inputDate) => {
     const date = new Date(inputDate);
@@ -110,9 +111,10 @@ const Resume = forwardRef(({ resumeInfo, color }, ref) => {
                     {project.overview}
                   </p>
                   <ul>
-                    {project.points?.map((point, index) => {
-                      return <li key={index}>{point}</li>;
-                    })}
+                    {project.points &&
+                      project.points?.map((point, index) => {
+                        return <li key={index}>{point}</li>;
+                      })}
                   </ul>
                 </div>
               );

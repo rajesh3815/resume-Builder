@@ -9,6 +9,7 @@
 .heading{
     font-weight: 500;
     font-size: 2.1rem;
+    margin-top: 1.5rem;
 }
 .toolbar{
     width: 100%;
@@ -57,4 +58,23 @@
 }
 .active{
     border:3px solid rgb(119, 118, 118)
+}
+@media only screen and (max-width: 767px) {
+.container{
+    padding: 5px;
+    gap: 1.5rem;
+    align-items: normal;
+    position: relative;
+}
+.toolbar button{
+    position: absolute;
+    top: 29px;
+    right: 12px;
+    padding: 8px 4px;
+}
+.heading{
+    margin-left: 10px;
+    font-size: 1.8rem;
+
+}
 }
