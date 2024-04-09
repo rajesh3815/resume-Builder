@@ -1,7 +1,115 @@
-.container{
+.container {
     min-width: 500px;
     flex: 1;
     height: fit-content;
     min-height: 90vh;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    font-family: sans-serif;
+}
+
+.heading {
+    font-size: 2rem;
+    font-family: ui-sans-serif;
+    letter-spacing: 1px;
+}
+
+.subHeading {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    margin-top: 8px;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.1rem;
+
+}
+
+.links p {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.links a {
+    text-decoration: none;
+    color: rgb(147, 215, 249);
+    display: flex;
+    gap: 5px;
+}
+
+.containerInner {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.educationChip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: 1px;
+}
+
+.sectionHeader {
+    font-size: 1.7rem;
+    font-weight: bold;
+    border-bottom: 3px solid black;
+    margin-bottom: 10px;
+}
+
+.dates {
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.educationChip {
+    line-height: 20px;
+    margin-bottom: 1rem;
+}
+
+.linkSpan {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.overview {
+    border-bottom: double;
+    width: max-content;
+    margin-bottom: 5px;
+}
+
+.projectChip ul,
+.workChip ul {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    margin-left: 30px;
+}
+
+.achivement ul {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    margin-left: 16px;
 }
