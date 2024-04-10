@@ -138,7 +138,7 @@ const Resume = forwardRef(({ resumeInfo, color }, ref) => {
             <p className={Style.sectionHeader}>Work Experience</p>
             {WorkExperienceDetail.map((work, index) => {
               return (
-                <div className={Style.workChip}>
+                <div key={index} className={Style.workChip}>
                   <p style={{ fontSize: "1.4rem", marginBottom: "10px" }}>
                     {work.title}
                   </p>
@@ -162,7 +162,7 @@ const Resume = forwardRef(({ resumeInfo, color }, ref) => {
                     {work.workType}
                   </p>
                   <ul>
-                    {console.log(work.points)}
+                    {/* {console.log(work.points)} */}
 
                     {work.points &&
                       work?.points?.map((point, index) => (

@@ -6,8 +6,8 @@ import Resume from "../resume/Resume";
 import ReactToPrint from "react-to-print";
 const Body = () => {
   const resumeRef = useRef();
-  const colors = ["#239ce2", "#80f55d", "#b32e3c", "#def241", "#db41f2"];
-  const [color, setColor] = useState("#001eff");
+  const colors = ["#239ce2", "#8f3832", "#4566ed", "#75562d", "#0f0f0f"];
+  const [color, setColor] = useState("#239ce2");
   const sections = {
     basicInfo: "BasicInfo",
     workExp: "WorkExperience",
